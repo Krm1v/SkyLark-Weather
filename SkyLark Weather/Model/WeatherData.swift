@@ -20,8 +20,8 @@ struct Main: Codable {
     let feelsLike: Double
     
     enum CodingKeys: String, CodingKey {
-        case temp
-        case feelsLike = "feels_like"
+        case temp = "temp"
+        case feelsLike = "feelsLike"
     }
 }
 

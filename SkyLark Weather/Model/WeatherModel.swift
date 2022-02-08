@@ -9,9 +9,9 @@ import Foundation
 
 struct WeatherModel {
     
+    let cityName: String
     let temperature: Double
     let feelsLike: Double
-    let cityName: String
     let description: String
     let id: Int
     

@@ -11,8 +11,9 @@ struct WeatherManager {
     
     //MARK: - Properties
     
-    let weatherURL = "https://api.openweathermap.org/data/2.5/weather?appid=79bf3d26d4be3a8cd7d6f5d952bc6d8a&units=metric"
     var delegate: WeatherManagerDelegate?
+    
+    private let weatherURL = "https://api.openweathermap.org/data/2.5/weather?appid=79bf3d26d4be3a8cd7d6f5d952bc6d8a&units=metric"
     
     //MARK: - Methods
     
@@ -22,7 +23,9 @@ struct WeatherManager {
     }
     
     func performRequest(with stringURL: String) {
+        
         guard let url = URL(string: stringURL) else { return }
+        print(url)
         let session = URLSession(configuration: .default)
         session.dataTask(with: url) { data, _, error in
             guard let data = data else { return }
@@ -35,25 +38,25 @@ struct WeatherManager {
         }.resume()
     }
     
-    func parseJSON(with weatherData: Data) -> WeatherModel? {
+    private func parseJSON(with weatherData: Data) -> WeatherModel? {
         
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         
         do {
             let decodedData = try decoder.decode(WeatherData.self, from: weatherData)
-            let cityName = decodedData.name
-            let weatherID = decodedData.weather[0].id
+            let name = decodedData.name
+            let id = decodedData.weather[0].id
             let feelsLike = decodedData.main.feelsLike
             let description = decodedData.weather[0].description
-            let temperature = decodedData.main.temp
+            let temp = decodedData.main.temp
             
-            let weather = WeatherModel(temperature: temperature,
+            let weather = WeatherModel(cityName: name ?? "",
+                                       temperature: temp,
                                        feelsLike: feelsLike,
-                                       cityName: cityName ?? "",
                                        description: description ?? "",
-                                       id: weatherID)
-            print(weather)
+                                       id: id)
+        
             return weather
         } catch {
             delegate?.didFailWithError(error: error)
