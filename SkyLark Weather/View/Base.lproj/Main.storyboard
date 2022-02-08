@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Weather View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SkyLark_Weather" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WeatherViewController" customModule="SkyLark_Weather" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,12 +29,16 @@
                                 <state key="normal" image="location">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                 </state>
+                                <connections>
+                                    <action selector="myLocationButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="xcq-hS-aE3"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="UVg-OA-d9h">
                                 <rect key="frame" x="63.5" y="146" width="287" height="493.5"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AOO-s8-L7p">
-                                        <rect key="frame" x="43.5" y="0.0" width="200" height="199"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wind" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="AOO-s8-L7p">
+                                        <rect key="frame" x="43.5" y="2" width="200" height="196"/>
+                                        <color key="tintColor" red="0.38823529410000002" green="0.45098039220000002" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="199" id="AR5-8n-RWf"/>
                                             <constraint firstAttribute="width" constant="200" id="kMx-2j-u2y"/>
@@ -96,6 +100,9 @@
                                             <constraint firstAttribute="height" constant="42" id="u4z-Sa-aZn"/>
                                         </constraints>
                                         <state key="normal" image="search"/>
+                                        <connections>
+                                            <action selector="searchButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="2CE-2V-fHL"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -118,6 +125,14 @@
                             <constraint firstItem="UVg-OA-d9h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="63.5" id="xsN-1W-gCC"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cityLabel" destination="4rA-7s-5xD" id="WVv-sj-w3J"/>
+                        <outlet property="feelsLikeLabel" destination="Nig-H6-TXq" id="5HD-Dd-Rw2"/>
+                        <outlet property="searchTextField" destination="gS8-ka-RYh" id="d5p-nA-BSV"/>
+                        <outlet property="temperatureLabel" destination="Phx-Jv-9Bs" id="5Vm-tH-nc3"/>
+                        <outlet property="weatherConditionLabel" destination="Unv-ma-291" id="HPe-Jz-yDt"/>
+                        <outlet property="weatherStatusImage" destination="AOO-s8-L7p" id="l5P-QW-h0t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -128,6 +143,7 @@
         <image name="abstract-6467847" width="7111.10693359375" height="4000"/>
         <image name="location" width="128" height="128"/>
         <image name="search" width="121.29000091552734" height="120.37999725341797"/>
+        <image name="wind" catalog="system" width="128" height="101"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
