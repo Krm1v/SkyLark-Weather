@@ -29,13 +29,15 @@ struct WeatherManager {
         let session = URLSession(configuration: .default)
         session.dataTask(with: url) { data, _, error in
             guard let data = data else { return }
-            guard let encodedData = self.parseJSON(with: data) else { return }
-            print(encodedData)
-            self.delegate?.didUpdateWeather(weatherManager: self, weatherModel: encodedData)
+            if let weather = self.parseJSON(with: data) {
+            print(weather)
+            self.delegate?.didUpdateWeather(weatherManager: self, weatherModel: weather)
+            }
             
             guard let error = error else { return }
             delegate?.didFailWithError(error: error)
         }.resume()
+        
     }
     
     private func parseJSON(with weatherData: Data) -> WeatherModel? {
@@ -45,18 +47,18 @@ struct WeatherManager {
         
         do {
             let decodedData = try decoder.decode(WeatherData.self, from: weatherData)
-            let name = decodedData.name
+            let name = decodedData.name ?? "No data"
             let id = decodedData.weather[0].id
             let feelsLike = decodedData.main.feelsLike
-            let description = decodedData.weather[0].description
+            let description = decodedData.weather[0].description ?? "No data"
             let temp = decodedData.main.temp
             
-            let weather = WeatherModel(cityName: name ?? "",
+            let weather = WeatherModel(cityName: name,
                                        temperature: temp,
                                        feelsLike: feelsLike,
-                                       description: description ?? "",
+                                       description: description,
                                        id: id)
-        
+            
             return weather
         } catch {
             delegate?.didFailWithError(error: error)

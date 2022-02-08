@@ -15,8 +15,8 @@ extension WeatherViewController: WeatherManagerDelegate {
             self.cityLabel.text = weatherModel.cityName
             self.temperatureLabel.text = weatherModel.temperatureString
             self.weatherStatusImage.image = UIImage(systemName: weatherModel.weatherCondition)
-            self.weatherConditionLabel.text = weatherModel.weatherCondition
-            self.feelsLikeLabel.text = weatherModel.feelsLikeString
+            self.weatherConditionLabel.text = weatherModel.description.capitalizingFirstLetter()
+            self.feelsLikeLabel.text = "Feels like: \(weatherModel.feelsLikeString)"
         }
     }
     
