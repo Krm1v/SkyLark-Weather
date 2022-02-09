@@ -9,10 +9,12 @@ import UIKit
 
 extension WeatherViewController {
     
-    func showAlert() {
+    func showAlert(with error: Error? = nil) {
         
-        let alert = UIAlertController(title: "Wrong format",
-                                      message: "Enter correct data",
+        guard let error = error else { return }
+        
+        let alert = UIAlertController(title: "Oops!",
+                                      message: "Something went wrong: \(error)",
                                       preferredStyle: .alert)
         
         let action = UIAlertAction(title: "OK",

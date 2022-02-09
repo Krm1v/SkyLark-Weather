@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class WeatherViewController: UIViewController {
     
@@ -21,13 +22,18 @@ class WeatherViewController: UIViewController {
     //MARK: - Properties
     
     var weatherManager = WeatherManager()
+    let locationManager = CLLocationManager()
     
     //MARK: - UIView lifecycle methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         searchTextField.delegate = self
         weatherManager.delegate = self
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.requestLocation()
     }
     //MARK: - @IBActions
     
@@ -36,6 +42,7 @@ class WeatherViewController: UIViewController {
     }
     
     @IBAction func myLocationButtonPressed() {
+        locationManager.requestLocation()
     }
 }
 

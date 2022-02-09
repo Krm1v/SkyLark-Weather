@@ -20,6 +20,7 @@
 		86E144B227B2FD5900A4A62B /* Extension + Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E144B127B2FD5900A4A62B /* Extension + Alert.swift */; };
 		86E144B427B2FD9100A4A62B /* Extension + WeatherManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E144B327B2FD9100A4A62B /* Extension + WeatherManagerDelegate.swift */; };
 		86E144B627B30F9000A4A62B /* Extension + String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E144B527B30F9000A4A62B /* Extension + String.swift */; };
+		86E144B827B4249D00A4A62B /* Extension + CoreLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E144B727B4249D00A4A62B /* Extension + CoreLocation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		86E144B127B2FD5900A4A62B /* Extension + Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + Alert.swift"; sourceTree = "<group>"; };
 		86E144B327B2FD9100A4A62B /* Extension + WeatherManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + WeatherManagerDelegate.swift"; sourceTree = "<group>"; };
 		86E144B527B30F9000A4A62B /* Extension + String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + String.swift"; sourceTree = "<group>"; };
+		86E144B727B4249D00A4A62B /* Extension + CoreLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + CoreLocation.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				86E144B127B2FD5900A4A62B /* Extension + Alert.swift */,
 				86E144B327B2FD9100A4A62B /* Extension + WeatherManagerDelegate.swift */,
 				86E144B527B30F9000A4A62B /* Extension + String.swift */,
+				86E144B727B4249D00A4A62B /* Extension + CoreLocation.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 				86E144AC27B2E4DA00A4A62B /* WeatherData.swift in Sources */,
 				86E144B627B30F9000A4A62B /* Extension + String.swift in Sources */,
 				86E144B227B2FD5900A4A62B /* Extension + Alert.swift in Sources */,
+				86E144B827B4249D00A4A62B /* Extension + CoreLocation.swift in Sources */,
 				86E144B427B2FD9100A4A62B /* Extension + WeatherManagerDelegate.swift in Sources */,
 				86220D2626AC36E60004EEAE /* AppDelegate.swift in Sources */,
 				86E144A927B2DD2200A4A62B /* WeatherManager.swift in Sources */,
@@ -356,7 +360,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vladkarmalov.skylarkweatherapp.SkyLark-Weather";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -375,7 +379,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vladkarmalov.skylarkweatherapp.SkyLark-Weather";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
