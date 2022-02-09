@@ -12,7 +12,7 @@ import Spring
 class WeatherViewController: UIViewController {
     
     //MARK: - @IBOutlets
-
+    
     @IBOutlet weak var searchTextField: SpringTextField!
     @IBOutlet weak var weatherStatusImage: UIImageView!
     @IBOutlet weak var weatherConditionLabel: UILabel!
@@ -31,7 +31,7 @@ class WeatherViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        addTapGestureForContainerView(view)
         searchTextField.delegate = self
         weatherManager.delegate = self
         locationManager.delegate = self

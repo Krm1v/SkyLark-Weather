@@ -9,8 +9,17 @@ import UIKit
 
 extension WeatherViewController {
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        view.endEditing(true)
-        super.touchesBegan(touches, with: event)
+    func addTapGestureForContainerView(_ view: UIView) {
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapContainer))
+        tapGestureRecognizer.numberOfTapsRequired = 1
+        tapGestureRecognizer.isEnabled = true
+        tapGestureRecognizer.cancelsTouchesInView = false
+        
+        view.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    @objc func tapContainer() {
+        self.searchTextField.endEditing(true)
+        self.view.endEditing(true)
     }
 }

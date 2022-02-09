@@ -15,13 +15,14 @@ extension WeatherViewController: UITextFieldDelegate {
     }
     
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        if textField.text != "" {
-            return true
-        } else {
+        
+        guard let text = searchTextField.text, !text.isEmpty else {
+            tapContainer()
             showAlert(with: "Enter correct city name")
-            resignFirstResponder()
-            return false
+            searchTextField.resignFirstResponder()
+            return true
         }
+        return true
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {

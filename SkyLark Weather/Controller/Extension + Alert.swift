@@ -20,6 +20,7 @@ extension WeatherViewController {
         
         let action = UIAlertAction(title: "OK",
                                    style: .cancel)
+        
         alert.addAction(action)
         
         DispatchQueue.main.async {
