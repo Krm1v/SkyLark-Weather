@@ -5,12 +5,12 @@
 //  Created by Владислав Баранкевич on 08.02.2022.
 //
 
-import UIKit
+import Spring
 
 extension WeatherViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        searchTextField.endEditing(true)
+        searchTextField.resignFirstResponder()
         return true
     }
     
@@ -19,6 +19,7 @@ extension WeatherViewController: UITextFieldDelegate {
             return true
         } else {
             showAlert(with: "Enter correct city name")
+            resignFirstResponder()
             return false
         }
     }

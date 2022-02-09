@@ -3,16 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00AC230F5F00F11CBD6B3E71 /* Pods_SkyLark_Weather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CA6A63DA52C23BDB4DD8BAB /* Pods_SkyLark_Weather.framework */; };
 		86220D2626AC36E60004EEAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86220D2526AC36E60004EEAE /* AppDelegate.swift */; };
 		86220D2826AC36E60004EEAE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86220D2726AC36E60004EEAE /* SceneDelegate.swift */; };
 		86220D2A26AC36E60004EEAE /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86220D2926AC36E60004EEAE /* WeatherViewController.swift */; };
 		86220D2D26AC36E60004EEAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86220D2B26AC36E60004EEAE /* Main.storyboard */; };
 		86220D2F26AC36E70004EEAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86220D2E26AC36E70004EEAE /* Assets.xcassets */; };
 		86220D3226AC36E70004EEAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86220D3026AC36E70004EEAE /* LaunchScreen.storyboard */; };
+		866C6E5027B43EA30078C7C4 /* Extension + Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866C6E4F27B43EA30078C7C4 /* Extension + Animation.swift */; };
+		866C6E5227B4430C0078C7C4 /* Extension + UIGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866C6E5127B4430C0078C7C4 /* Extension + UIGesture.swift */; };
 		86E144A927B2DD2200A4A62B /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E144A827B2DD2100A4A62B /* WeatherManager.swift */; };
 		86E144AC27B2E4DA00A4A62B /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E144AB27B2E4DA00A4A62B /* WeatherData.swift */; };
 		86E144AE27B2ECB800A4A62B /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E144AD27B2ECB800A4A62B /* WeatherModel.swift */; };
@@ -24,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0CA6A63DA52C23BDB4DD8BAB /* Pods_SkyLark_Weather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkyLark_Weather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C576382634013C7327679E6 /* Pods-SkyLark Weather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyLark Weather.debug.xcconfig"; path = "Target Support Files/Pods-SkyLark Weather/Pods-SkyLark Weather.debug.xcconfig"; sourceTree = "<group>"; };
 		86220D2226AC36E60004EEAE /* SkyLark Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SkyLark Weather.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86220D2526AC36E60004EEAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86220D2726AC36E60004EEAE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +37,8 @@
 		86220D2E26AC36E70004EEAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		86220D3126AC36E70004EEAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		86220D3326AC36E70004EEAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		866C6E4F27B43EA30078C7C4 /* Extension + Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + Animation.swift"; sourceTree = "<group>"; };
+		866C6E5127B4430C0078C7C4 /* Extension + UIGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UIGesture.swift"; sourceTree = "<group>"; };
 		86E144A827B2DD2100A4A62B /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
 		86E144AB27B2E4DA00A4A62B /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		86E144AD27B2ECB800A4A62B /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
@@ -40,6 +47,7 @@
 		86E144B327B2FD9100A4A62B /* Extension + WeatherManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + WeatherManagerDelegate.swift"; sourceTree = "<group>"; };
 		86E144B527B30F9000A4A62B /* Extension + String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + String.swift"; sourceTree = "<group>"; };
 		86E144B727B4249D00A4A62B /* Extension + CoreLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + CoreLocation.swift"; sourceTree = "<group>"; };
+		9FD43D0D6DD2CA8191B8FBC0 /* Pods-SkyLark Weather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyLark Weather.release.xcconfig"; path = "Target Support Files/Pods-SkyLark Weather/Pods-SkyLark Weather.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,17 +55,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00AC230F5F00F11CBD6B3E71 /* Pods_SkyLark_Weather.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C4FCAB90056A25AF8D8110D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0CA6A63DA52C23BDB4DD8BAB /* Pods_SkyLark_Weather.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7F10E382F0967F0C49EF8DD3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4C576382634013C7327679E6 /* Pods-SkyLark Weather.debug.xcconfig */,
+				9FD43D0D6DD2CA8191B8FBC0 /* Pods-SkyLark Weather.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		86220D1926AC36E60004EEAE = {
 			isa = PBXGroup;
 			children = (
 				86220D2426AC36E60004EEAE /* SkyLark Weather */,
 				86220D2326AC36E60004EEAE /* Products */,
+				7F10E382F0967F0C49EF8DD3 /* Pods */,
+				1C4FCAB90056A25AF8D8110D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +137,8 @@
 				86E144B327B2FD9100A4A62B /* Extension + WeatherManagerDelegate.swift */,
 				86E144B527B30F9000A4A62B /* Extension + String.swift */,
 				86E144B727B4249D00A4A62B /* Extension + CoreLocation.swift */,
+				866C6E4F27B43EA30078C7C4 /* Extension + Animation.swift */,
+				866C6E5127B4430C0078C7C4 /* Extension + UIGesture.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -130,9 +160,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 86220D3626AC36E70004EEAE /* Build configuration list for PBXNativeTarget "SkyLark Weather" */;
 			buildPhases = (
+				F86C763CA351D28959CDAC63 /* [CP] Check Pods Manifest.lock */,
 				86220D1E26AC36E60004EEAE /* Sources */,
 				86220D1F26AC36E60004EEAE /* Frameworks */,
 				86220D2026AC36E60004EEAE /* Resources */,
+				FAACC5CF69FFEDD22FAC9DBB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -188,6 +220,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		F86C763CA351D28959CDAC63 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SkyLark Weather-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FAACC5CF69FFEDD22FAC9DBB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SkyLark Weather/Pods-SkyLark Weather-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SkyLark Weather/Pods-SkyLark Weather-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SkyLark Weather/Pods-SkyLark Weather-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		86220D1E26AC36E60004EEAE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -196,9 +270,11 @@
 				86220D2A26AC36E60004EEAE /* WeatherViewController.swift in Sources */,
 				86E144AC27B2E4DA00A4A62B /* WeatherData.swift in Sources */,
 				86E144B627B30F9000A4A62B /* Extension + String.swift in Sources */,
+				866C6E5227B4430C0078C7C4 /* Extension + UIGesture.swift in Sources */,
 				86E144B227B2FD5900A4A62B /* Extension + Alert.swift in Sources */,
 				86E144B827B4249D00A4A62B /* Extension + CoreLocation.swift in Sources */,
 				86E144B427B2FD9100A4A62B /* Extension + WeatherManagerDelegate.swift in Sources */,
+				866C6E5027B43EA30078C7C4 /* Extension + Animation.swift in Sources */,
 				86220D2626AC36E60004EEAE /* AppDelegate.swift in Sources */,
 				86E144A927B2DD2200A4A62B /* WeatherManager.swift in Sources */,
 				86E144AE27B2ECB800A4A62B /* WeatherModel.swift in Sources */,
@@ -347,6 +423,7 @@
 		};
 		86220D3726AC36E70004EEAE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C576382634013C7327679E6 /* Pods-SkyLark Weather.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -366,6 +443,7 @@
 		};
 		86220D3826AC36E70004EEAE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FD43D0D6DD2CA8191B8FBC0 /* Pods-SkyLark Weather.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
