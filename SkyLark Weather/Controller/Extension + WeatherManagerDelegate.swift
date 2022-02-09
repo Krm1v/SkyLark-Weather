@@ -21,6 +21,6 @@ extension WeatherViewController: WeatherManagerDelegate {
     }
     
     func didFailWithError(error: Error) {
-        showAlert(with: error)
+        showAlert(with: error.localizedDescription)
     }
 }

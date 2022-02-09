@@ -17,7 +17,8 @@ extension WeatherViewController: CLLocationManagerDelegate {
         weatherManager.fetchLocation(latitude: lat, longtitude: lon)
     }
     
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-//        showAlert(with: error)
+    func locationManager(_ manager: CLLocationManager,
+                         didFailWithError error: Error) {
+        print(error.localizedDescription)
     }
 }

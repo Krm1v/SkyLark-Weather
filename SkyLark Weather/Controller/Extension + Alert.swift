@@ -9,18 +9,21 @@ import UIKit
 
 extension WeatherViewController {
     
-    func showAlert(with error: Error? = nil) {
+    func showAlert(with error: String? = nil) {
         
         guard let error = error else { return }
+        let stringError = String(error)
         
         let alert = UIAlertController(title: "Oops!",
-                                      message: "Something went wrong: \(error)",
+                                      message: "Something went wrong: \(stringError)",
                                       preferredStyle: .alert)
         
         let action = UIAlertAction(title: "OK",
                                    style: .cancel)
         alert.addAction(action)
         
-        present(alert, animated: true, completion: nil)
+        DispatchQueue.main.async {
+            self.present(alert, animated: true, completion: nil)
+        }
     }
 }

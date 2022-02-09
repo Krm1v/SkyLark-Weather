@@ -18,7 +18,7 @@ extension WeatherViewController: UITextFieldDelegate {
         if textField.text != "" {
             return true
         } else {
-            showAlert()
+            showAlert(with: "Enter correct city name")
             return false
         }
     }
