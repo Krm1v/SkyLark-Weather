@@ -20,15 +20,19 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="abstract-6467847" translatesAutoresizingMaskIntoConstraints="NO" id="l75-D8-awR">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oop-Hg-9rs">
-                                <rect key="frame" x="304" y="762" width="85" height="85"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oop-Hg-9rs" customClass="SpringButton" customModule="Spring">
+                                <rect key="frame" x="304" y="762" width="85" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="85" id="N4Q-XN-jys"/>
-                                    <constraint firstAttribute="height" constant="85" id="ohI-mE-4G5"/>
+                                    <constraint firstAttribute="height" constant="70" id="ohI-mE-4G5"/>
                                 </constraints>
                                 <state key="normal" image="location">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autohide" value="NO"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="myLocationButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="xcq-hS-aE3"/>
                                 </connections>
@@ -44,7 +48,7 @@
                                             <constraint firstAttribute="width" constant="200" id="kMx-2j-u2y"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Windy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Unv-ma-291">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Windy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Unv-ma-291">
                                         <rect key="frame" x="85" y="202" width="117" height="41"/>
                                         <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="35"/>
                                         <color key="textColor" red="1" green="0.60392156860000001" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -85,7 +89,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="ZrR-Eb-aFd">
                                 <rect key="frame" x="85" y="64" width="304" height="42"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter cityname" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gS8-ka-RYh">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter cityname" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gS8-ka-RYh" customClass="SpringTextField" customModule="Spring">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="42"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="Kwn-sC-SJA"/>
@@ -93,7 +97,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="go" textContentType="address-level2"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6oh-QM-nAq">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6oh-QM-nAq" customClass="SpringButton" customModule="Spring">
                                         <rect key="frame" x="262" y="0.0" width="42" height="42"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="42" id="ckN-QG-41T"/>
@@ -110,17 +114,17 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="l75-D8-awR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4UO-SR-TV0"/>
-                            <constraint firstItem="l75-D8-awR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Ff0-SC-7Fc"/>
                             <constraint firstAttribute="bottomMargin" secondItem="UVg-OA-d9h" secondAttribute="bottom" constant="222.5" id="Fhb-ig-ywQ"/>
                             <constraint firstItem="ZrR-Eb-aFd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Ifg-zH-Pv5"/>
                             <constraint firstItem="UVg-OA-d9h" firstAttribute="top" secondItem="ZrR-Eb-aFd" secondAttribute="bottom" constant="40" id="S8j-4o-AHf"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oop-Hg-9rs" secondAttribute="bottom" constant="15" id="Z3t-6s-CyO"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="l75-D8-awR" secondAttribute="trailing" id="anS-4P-b8N"/>
+                            <constraint firstAttribute="trailing" secondItem="l75-D8-awR" secondAttribute="trailing" id="Ux8-Tu-cxt"/>
+                            <constraint firstItem="l75-D8-awR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Xos-Tv-iCj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oop-Hg-9rs" secondAttribute="bottom" constant="30" id="Z3t-6s-CyO"/>
                             <constraint firstItem="ZrR-Eb-aFd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="85" id="fnE-OT-Z1g"/>
+                            <constraint firstAttribute="bottom" secondItem="l75-D8-awR" secondAttribute="bottom" id="m8w-wZ-w1y"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UVg-OA-d9h" secondAttribute="trailing" constant="63.5" id="mrG-O9-Fh8"/>
+                            <constraint firstItem="l75-D8-awR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="quu-Gk-Hk9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZrR-Eb-aFd" secondAttribute="trailing" constant="25" id="rMA-Hv-yNf"/>
-                            <constraint firstAttribute="bottom" secondItem="l75-D8-awR" secondAttribute="bottom" id="tb4-Cs-7bZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oop-Hg-9rs" secondAttribute="trailing" constant="25" id="tbu-4h-Ja9"/>
                             <constraint firstItem="UVg-OA-d9h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="63.5" id="xsN-1W-gCC"/>
                         </constraints>
@@ -128,7 +132,9 @@
                     <connections>
                         <outlet property="cityLabel" destination="4rA-7s-5xD" id="WVv-sj-w3J"/>
                         <outlet property="feelsLikeLabel" destination="Nig-H6-TXq" id="5HD-Dd-Rw2"/>
-                        <outlet property="searchTextField" destination="gS8-ka-RYh" id="d5p-nA-BSV"/>
+                        <outlet property="locationButton" destination="oop-Hg-9rs" id="Lat-xQ-Afr"/>
+                        <outlet property="searchButton" destination="6oh-QM-nAq" id="Vdd-Zw-5EW"/>
+                        <outlet property="searchTextField" destination="gS8-ka-RYh" id="A7g-OE-R5t"/>
                         <outlet property="temperatureLabel" destination="Phx-Jv-9Bs" id="5Vm-tH-nc3"/>
                         <outlet property="weatherConditionLabel" destination="Unv-ma-291" id="HPe-Jz-yDt"/>
                         <outlet property="weatherStatusImage" destination="AOO-s8-L7p" id="l5P-QW-h0t"/>

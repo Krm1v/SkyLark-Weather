@@ -5,22 +5,24 @@
 //  Created by Владислав Баранкевич on 08.02.2022.
 //
 
-import UIKit
+import Spring
 
 extension WeatherViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        searchTextField.endEditing(true)
+        searchTextField.resignFirstResponder()
         return true
     }
     
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        if textField.text != "" {
+        
+        guard let text = searchTextField.text, !text.isEmpty else {
+            tapContainer()
+            showAlert(with: "Enter correct city name")
+            searchTextField.resignFirstResponder()
             return true
-        } else {
-            showAlert()
-            return false
         }
+        return true
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
