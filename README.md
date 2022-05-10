@@ -8,7 +8,7 @@
 ![11](https://user-images.githubusercontent.com/73246410/167634966-eb0eea61-e0bd-4390-bdb0-8f38f4b00554.png)
 
 ## Nice animations
-https://user-images.githubusercontent.com/73246410/167636392-74bf2a2f-9165-4a50-83f6-492b99ae80c6.mp4
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/73246410/167643317-a83e9502-4846-4f69-8f83-be5c06710da2.gif)
 
 ## Used tools and frameworks:
 * UIKit framework
