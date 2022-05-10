@@ -39,11 +39,9 @@ struct WeatherManager {
                 print(weather)
                 self.delegate?.didUpdateWeather(weatherManager: self, weatherModel: weather)
             }
-            
             guard let error = error else { return }
             delegate?.didFailWithError(error: error)
         }.resume()
-        
     }
     
     private func parseJSON(with weatherData: Data) -> WeatherModel? {
