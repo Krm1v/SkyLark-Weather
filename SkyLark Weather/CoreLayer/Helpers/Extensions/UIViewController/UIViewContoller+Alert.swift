@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension WeatherViewController {
+extension UIViewController {
     
     func showAlert(with error: String? = nil) {
         
