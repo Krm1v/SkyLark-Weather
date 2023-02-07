@@ -8,30 +8,37 @@
 import Foundation
 import CoreLocation
 
+fileprivate enum BaseURLs {
+	static let baseURL = "https://api.openweathermap.org/data/2.5/weather?appid=79bf3d26d4be3a8cd7d6f5d952bc6d8a&units=metric"
+}
+
+protocol WeatherManagerDelegate {
+	func didUpdateWeather(weatherManager: WeatherManager,
+						  weatherModel: WeatherModel)
+	func didFailWithError(error: Error)
+}
+
 struct WeatherManager {
+	//MARK: - Properties
+	var delegate: WeatherManagerDelegate?
+	
+	//MARK: - Public methods
+	func fetchWeather(cityName: String) {
+		let urlAsString = "\(BaseURLs.baseURL)&q=\(cityName)"
+		performRequest(with: urlAsString)
+	}
+	
+	func fetchLocation(latitude: CLLocationDegrees,
+					   longtitude: CLLocationDegrees) {
+		let urlAsString = "\(BaseURLs.baseURL)&lat=\(latitude)&lon=\(longtitude)"
+		performRequest(with: urlAsString)
+	}
+}
     
-    //MARK: - Properties
-    
-    var delegate: WeatherManagerDelegate?
-    
-    private let weatherURL = "https://api.openweathermap.org/data/2.5/weather?appid=79bf3d26d4be3a8cd7d6f5d952bc6d8a&units=metric"
-    
-    //MARK: - Methods
-    
-    func fetchWeather(cityName: String) {
-        let urlAsString = "\(weatherURL)&q=\(cityName)"
-        performRequest(with: urlAsString)
-    }
-    
-    func fetchLocation(latitude: CLLocationDegrees, longtitude: CLLocationDegrees) {
-        let urlAsString = "\(weatherURL)&lat=\(latitude)&lon=\(longtitude)"
-        performRequest(with: urlAsString)
-    }
-    
-    private func performRequest(with stringURL: String) {
-        
+//MARK: - Private extension
+private extension WeatherManager {
+	func performRequest(with stringURL: String) {
         guard let url = URL(string: stringURL) else { return }
-        print(url)
         let session = URLSession(configuration: .default)
         session.dataTask(with: url) { data, _, error in
             guard let data = data else { return }
@@ -45,7 +52,6 @@ struct WeatherManager {
     }
     
     private func parseJSON(with weatherData: Data) -> WeatherModel? {
-        
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         
@@ -56,24 +62,15 @@ struct WeatherManager {
             let feelsLike = decodedData.main.feelsLike
             let description = decodedData.weather[0].description ?? "No data"
             let temp = decodedData.main.temp
-            
             let weather = WeatherModel(cityName: name,
                                        temperature: temp,
                                        feelsLike: feelsLike,
                                        description: description,
                                        id: id)
-            
             return weather
-        } catch {
+        } catch let error {
             delegate?.didFailWithError(error: error)
             return nil
         }
     }
-}
-
-//MARK: - WeatherManagerDelegate
-
-protocol WeatherManagerDelegate {
-    func didUpdateWeather(weatherManager: WeatherManager, weatherModel: WeatherModel)
-    func didFailWithError(error: Error)
 }

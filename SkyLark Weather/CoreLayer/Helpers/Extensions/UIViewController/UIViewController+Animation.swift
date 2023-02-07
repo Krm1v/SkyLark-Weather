@@ -7,8 +7,7 @@
 
 import Spring
 
-extension WeatherViewController {
-    
+extension UIViewController {
     func animateLocationButton(button: SpringButton) {
         button.autostart = false
         button.duration = 2
